@@ -5,8 +5,8 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.xiaokai.hitsz.dazhong"
-        minSdkVersion 23
         targetSdkVersion 23
+        minSdkVersion 17
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -21,13 +21,13 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':xutils')
+    compile files('libs/okhttp-2.4.0.jar')
+    compile files('libs/picasso-2.5.2.jar')
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
-    compile project(':xutils')
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support:support-annotations:23.2.0'
-    compile files('libs/okhttp-2.4.0.jar')
-    compile files('libs/picasso-2.5.2.jar')
 }
